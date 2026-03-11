@@ -34,7 +34,8 @@ const checkPassword = (req, res, next) =>
 }
 
 
-app.use(bodyParser.urlencoded({ extended: true }));//extended: true allows for rich objects and arrays to be encoded into the URL-encoded format, which can be useful for complex data structures.
+app.use(express.urlencoded({ extended: true }));//body-parser is now part of express
+//app.use(bodyParser.urlencoded({ extended: true }));//extended: true allows for rich objects and arrays to be encoded into the URL-encoded format, which can be useful for complex data structures.
 app.use(bodyParser.json());
 
 app.use(checkPassword);
