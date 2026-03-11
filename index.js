@@ -56,6 +56,7 @@ app.post("/check", (req, res) => {
     }
     else
     {
-        res.send("<h1>Incorrect password!</h1><p>Try again.</p>");
+        console.log("Incorrect password! Try again.");
+        res.redirect("/");
     }
 });
